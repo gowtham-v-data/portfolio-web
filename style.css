@@ -432,14 +432,15 @@ nav a:hover::after {
 }
 
 .resume-btn {
-    display: block;
+    display: block !important;
     width: 100%;
     margin-top: 16px;
     padding: 12px 20px;
     text-align: center;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #fff;
+    color: #fff !important;
+    text-decoration: none;
     background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
     border-radius: 10px;
     border: none;
@@ -447,6 +448,7 @@ nav a:hover::after {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .resume-btn::before {
@@ -458,6 +460,7 @@ nav a:hover::after {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s ease;
+    z-index: 1;
 }
 
 .resume-btn:hover::before {
@@ -467,10 +470,13 @@ nav a:hover::after {
 .resume-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(22, 163, 74, 0.35);
+    color: #fff !important;
 }
 
 .resume-btn i {
     margin-right: 8px;
+    position: relative;
+    z-index: 2;
 }
 
 
